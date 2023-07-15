@@ -33,3 +33,11 @@ print(person2['age'])
 print(person3['age'])
 print(person4['age'])
 print(person5['age'])
+# check if the number you entered is odd or even
+num =int(input('enter the number '))
+if (num % 2)==0:
+    print("the number is odd")
+else:
+    print ("the number is even") 
+# check if the number you entered is prime or not       
+num2=int (input("enter the number "))
