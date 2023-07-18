@@ -70,11 +70,57 @@ name2='salem'
  #   print('the number is odd') 
 
 # prime or not        
-prime=int(input('enter the number : '))
-for i in range (2,prime):
-    if (prime%i)==0:
-        print ('not prime')
-        break
-else :
-     print('prime')   
+#prime=int(input('enter the number : '))
+#for i in range (2,prime):
+ #   if (prime%i)==0:
+  #      print ('not prime')
+   #     break
+#else :
+#     print('prime')   
         
+# functions 
+#def function name ()
+
+#def printName (name):
+ #   print('my name is  : '+ name)
+
+#printName('sarah')  
+
+#num1=int (input('enter first number: '))
+#num2=int (input('enter second number: '))
+#def sumAndMulty(first ,second):
+ #   sumation=first+second
+  #  mult=first*second
+   # return('the sumis :'+str(sumation)+' and the multy is :'+str(mult))
+
+#print (sumAndMulty(num1,num2))
+
+
+
+def animalNameAndType(type ,name):
+    print ('I have a '+type)
+    print('My '+type+'s'+ ' name is '+name)
+
+print('Hello ,enter your animals nam and type \n')   
+animalType=input('enter your animal type: ')
+animalName=input('enter your animal name: ')
+animalNameAndType(animalType,animalName)
+print('Do you want to enter a new animal?')
+newANimal=(input(' YES or NO:'))
+while newANimal!='yes' and newANimal!='no':
+    print ('wrong input')
+    newANimal=(input(' YES or NO:'))
+while newANimal=='yes':
+  if newANimal=='yes':
+    animalType=input('enter your animal type: ')
+    animalName=input('enter your animal name: ')
+    animalNameAndType(animalType,animalName)
+    print('Do you want to enter a new animal?')
+    newANimal=(input(' YES or NO:'))
+    while newANimal!='yes' and newANimal!='no':
+      print ('wrong input')
+      newANimal=(input(' YES or NO:'))
+       
+else:
+  print ('Thank you !')
+  
