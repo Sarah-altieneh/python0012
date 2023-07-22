@@ -97,30 +97,30 @@ name2='salem'
 
 
 
-def animalNameAndType(type ,name):
-    print ('I have a '+type)
-    print('My '+type+'s'+ ' name is '+name)
+#def animalNameAndType(type ,name):
+ #   print ('I have a '+type)
+  #  print('My '+type+'s'+ ' name is '+name)
 
-print('Hello ,enter your animals nam and type \n')   
-animalType=input('enter your animal type: ')
-animalName=input('enter your animal name: ')
-animalNameAndType(animalType,animalName)
-print('Do you want to enter a new animal?')
-newANimal=(input(' YES or NO:'))
-while newANimal!='yes' and newANimal!='no':
-    print ('wrong input')
-    newANimal=(input(' YES or NO:'))
-while newANimal=='yes':
-  if newANimal=='yes':
-    animalType=input('enter your animal type: ')
-    animalName=input('enter your animal name: ')
-    animalNameAndType(animalType,animalName)
-    print('Do you want to enter a new animal?')
-    newANimal=(input(' YES or NO:'))
-    while newANimal!='yes' and newANimal!='no':
-      print ('wrong input')
-      newANimal=(input(' YES or NO:'))
+#print('Hello ,enter your animals nam and type \n')   
+#animalType=input('enter your animal type: ')
+#animalName=input('enter your animal name: ')
+#animalNameAndType(animalType,animalName)
+#print('Do you want to enter a new animal?')
+#newANimal=(input(' YES or NO:'))
+#while newANimal!='yes' and newANimal!='no':
+ #   print ('wrong input')
+  #  newANimal=(input(' YES or NO:'))
+#while newANimal=='yes':
+ # if newANimal=='yes':
+  #  animalType=input('enter your animal type: ')
+   # animalName=input('enter your animal name: ')
+    #animalNameAndType(animalType,animalName)
+    #print('Do you want to enter a new animal?')
+    #newANimal=(input(' YES or NO:'))
+   # while newANimal!='yes' and newANimal!='no':
+    #  print ('wrong input')
+     # newANimal=(input(' YES or NO:'))
        
-else:
-  print ('Thank you !')
+#else:
+ # print ('Thank you !')
   
