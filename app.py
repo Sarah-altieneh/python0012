@@ -46,7 +46,7 @@
 #name1='loai'
 #name1='*'+name1[1:]
 #print(name1)
-name2='salem'
+#name2='salem'
 #name2=name2[0:2]+'*'+name2[3:]
 #print(name2)
 
@@ -123,4 +123,69 @@ name2='salem'
        
 #else:
  # print ('Thank you !')
-  
+#list1=[1,3,6,8,'a','9',10,13,9,20]
+#sumation=0
+#for i in list1:
+ #   try:
+  #    sumation+=int(i)  
+   # except ValueError:
+    #   print ('wrong input')
+#print(sumation)    
+
+#dectinary
+person={
+    'name':'sarah',
+    'age': 21,
+    'city':'Irbid',
+}
+person['job']='developer '
+person['skills']=['c++','c#','java ']
+person['parents']={
+    'father':'mazen',
+    'mother': 'asam'
+}
+#for i in person:
+ #   print(i+' : '+str(person[i]))
+#clear method 
+#person.clear()
+#print(person)
+
+# copy 
+#decNew ={}
+#decNew=person.copy()
+#print (decNew)
+
+#items 
+#print(person.items())
+
+#keys
+#print(person.keys())
+
+#values
+#print(person.values())
+
+#classRoom={
+ #   'sarah':{
+  #    'name':'sarah',
+   #   'age':21  ,
+    #  'city':'irbid'
+   # },
+    #'mazen':{
+     # 'name':'mazen',
+      #'age':25,
+      #'city':'amman'  
+    #},
+    #'marah':{
+     #   'name':'marah',
+      #  'age':23,
+       # 'city':'irbid'
+    #},
+    #'seedra':{
+     #   'name':'seedra',
+     #   'age':18,
+      #  'city':'amman'
+    #}
+#}
+#for i in classRoom:
+ #   print(classRoom[i])
+  #  print('----------------------------------')
