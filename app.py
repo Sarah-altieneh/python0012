@@ -189,3 +189,35 @@ person['parents']={
 #for i in classRoom:
  #   print(classRoom[i])
   #  print('----------------------------------')
+
+student ={}
+inserstTime=int(input('how many keys do you want to add: '))
+for i in range (inserstTime):
+  stkey=input('Enter the key: ')
+  keytype=int(input('enter the type of the key 1 for str 2 for int 3 for list 4 for dic: '))
+  if (int(keytype)==1):
+     student[stkey]=input('enter the value of '+stkey+': ')
+  elif(int(keytype)==2):   
+            tryAndEX=True
+            while tryAndEX:
+              try:
+                  student[i]=int(input('enter your age : '))
+                  tryAndEX=False
+              except ValueError:
+                print('not number ') 
+  elif(int(keytype)==3):
+     
+     skillsElements = int(input("Enter the number of "+stkey+"skills you have : "))
+     student[stkey]=[]
+     for i in range(skillsElements):
+        student[stkey].append(input('enter the'+stkey+': '))
+  elif(int(keytype)==4):                     
+    time=int(input('enter number of dectionary you want to add: '))
+    for i in range(time):             
+      newDec =input('enter new key :')
+      student[newDec]={}
+      time1=int(input('enter number of '+ newDec +' you want to add: '))
+      for j in range (time1):
+        newSubKey=input ('enter '+newDec+'number '+str(j+1)+': ')
+        student[newDec][newSubKey]=input('enter the value : ')
+print (student)
