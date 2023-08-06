@@ -84,7 +84,7 @@
        # 'city':studentCity,
         #'job':studentJob,
         #'Parents':parents,
-        '#skills':skills
+        #'skills':skills
     #}
 #classRoom={}
 #newStudent='yes'
@@ -106,5 +106,42 @@
              #           print(f"\tfather: {student_info['Parents']['father']}")
               #          print("Skills:", ", ".join(student_info['skills']))
                #         print('-----------------------------------')
+
 #classes home work
-         
+class Car:
+        def __init__(self,carType,carModel,carYear):
+                self.carType=carType
+                self.carModel=carModel
+                self.carYear=carYear
+        def __str__(self):                     
+                 return f'car Type :{self.carType} , car model : {self.carModel} , car year :{self.carYear}'
+car1=Car('audi','s60','2023')       
+print(car1) 
+
+class Movie :
+       def __init__(self,moviType,yearOfMovie,rateOfMovi):
+                self.moviType=moviType
+                self.yearOfMovi=yearOfMovie
+                self.rateOfMovi=rateOfMovi
+       def __str__(self):                     
+                 return f'Movie Type :{self.moviType}, The Year Of the movie : {self.yearOfMovi}, The Rating of the movie  :{self.rateOfMovi}'  
+movie1=Movie('Harry potter','2003','adventure ')
+print(movie1)
+class Pets :
+       def __init__(self,petName,petType,petAge):
+                self.petName=petName
+                self.petType=petType
+                self.petAge=petAge
+       def __str__(self):                     
+                 return f'Your pet name :{self.petName} , The type of the pet : {self.petType} , The age of your pet :{str(self.petAge)}'  
+pet=Pets('sam','cat',3)  
+print(pet)  
+class VideoGames :
+       def __init__(self,nameOfGame,editionYear,typeOfGame):
+                self.nameOfGame=nameOfGame
+                self.editionYear=editionYear
+                self.typeOfGame=typeOfGame
+       def __str__(self):                     
+                 return f'The game name :{self.nameOfGame} ,The edition year of the game : {self.editionYear} , The type of the game :{self.typeOfGame}'  
+game1=VideoGames('puzzel','2022','intelgent')
+print(game1)   
