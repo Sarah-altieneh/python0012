@@ -222,13 +222,25 @@ person['parents']={
         #student[newDec][newSubKey]=input('enter the value : ')
 #print (student)
 
+import random
+
+
 class BankAccount:
     acc_name=''
     acc_num=0
     balance=0
-    def __init__(self,acc_name,acc_num,balance,password):
+    def generateAccountNum(self):
+      accountnum=[]
+      x=0
+      for i in range (6):
+          testnum=random.randint(1,9)
+          accountnum.append(testnum)
+      for i in range (len(accountnum)):
+          x=x*10+accountnum[i]
+      return x  
+    def __init__(self,acc_name,balance,password):
         self.acc_name=acc_name
-        self.acc_num=acc_num
+        self.acc_num=self.generateAccountNum()
         self.balance=balance
         self.password=password
     def __str__(self):
@@ -267,29 +279,55 @@ class BankAccount:
         self.acc_name='The account is closed'
         self.acc_num=0
         self.balance=0
-        return f'name is {self.acc_name} and the account number is {self.acc_num} and the belence is {self.balance}'
+        return f'The account is closed'
         
-userName=input('enter your name :') 
-accNum=input('enter the account number : ')
-accbalance=int(input('enter the balance in your account :')) 
-passwor=input('enter you password: ')      
-account1=BankAccount(userName,accNum,accbalance,passwor)
-check=True
-while check:
-  newop=input('Do you want to make new operatio (yes or no):')  
-  if newop=='yes':
-    opkey=int(input('enter the type of the key 1 for withdraw 2 for deposite 3 for check balance 4 for close account: '))
-    if (int(opkey)==1):
-        amount=(input('enter the amount you want to withdraw: '))
-        print(account1.withdraw(amount))     
-    elif  (int(opkey)==2):  
-          amount=(input('enter the amount you want to withdraw: '))
-          print (account1.deposit(amount))
-    elif(int(opkey)==3):      
-      print(account1.checkAccount())
-    elif(int(opkey)==4):  
-      print (account1.closeAccount())
-  else:
-      check=False
-      print('Thank you !')    
- 
+accounts=[]
+while True:
+    print('*'*50)
+    print('Welcome to our bank!')
+    print('Do you have an account?')
+    print('1.yes')
+    print('2.no')
+    choice = input('Enter your choice: ')
+    if choice == '2':
+      userName=input('enter your name :') 
+      tryAndEx=True
+      while tryAndEx:
+        try:
+          accbalance=int(input('enter the balance in your account :')) 
+          tryAndEx=False
+        except ValueError:
+            print ('You enter wrong balance')  
+      passwor=input('enter you password: ')      
+      account1=BankAccount(userName,accbalance,passwor)
+      for i in range (len (accounts)):
+           account1=BankAccount(userName,accbalance,passwor)
+      accounts.append (account1)
+      print (account1)
+    elif choice=='1':
+         userName=input('enter your account number :') 
+         passwor=input('enter you password: ')   
+         for i in range (len(accounts)):
+             if accounts[i].acc_num==userName and accounts[i].password==passwor:
+                  print ('1.Transfare money')
+                  print('2.close account')
+                  print('3.withdraw')
+                  print('4.deposit')
+                  print('5.check balance')
+                  print('6.exit')
+                  choice= input('enter your choice : ')
+                  if choice=='1':
+                        pass
+                  elif choice=='2':
+                        print (accounts[i].closeAccount())
+                  elif  (choice=='3'):  
+                          amount=(input('enter the amount you want to withdraw: '))
+                          print(accounts[i].withdraw(amount))     
+                  elif(choice=='4'):     
+                          amount=(input('enter the amount you want to deposit: '))
+                          print (accounts[i].deposit(amount))
+                  elif(choice=='5'):  
+                    print(accounts[i].checkAccount())
+                  elif(choice=='6'):
+                      break 
+          
