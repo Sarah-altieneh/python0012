@@ -280,6 +280,23 @@ class BankAccount:
         self.acc_num=0
         self.balance=0
         return f'The account is closed'
+    def transaction(self,amount,num_accont):
+        print ('You are about to make a transaction operation: ')
+        passw=input('enter your password to confirme your closeing operation : ')
+        try:
+            if(self.password==passw):
+              if (self.balance)<int(amount):
+                  return 'you do not have engough money'
+              self.balance-=int(amount)
+              print(f'You transferred {amount} to account {num_accont.acc_num}')
+              num_accont.balance +=int(amount)
+              print(f"you'r balance is {self.balance}")
+            else :
+                print ('you entered wrong password ')  
+        except ValueError:
+              return 'you entered wrong value '      
+
+        
         
 accounts=[]
 while True:
@@ -308,7 +325,7 @@ while True:
          userName=input('enter your account number :') 
          passwor=input('enter you password: ')   
          for i in range (len(accounts)):
-             if accounts[i].acc_num==userName and accounts[i].password==passwor:
+             if accounts[i].acc_num==int(userName) and accounts[i].password==passwor:
                   print ('1.Transfare money')
                   print('2.close account')
                   print('3.withdraw')
@@ -317,7 +334,10 @@ while True:
                   print('6.exit')
                   choice= input('enter your choice : ')
                   if choice=='1':
-                        pass
+                        target_acc_num=input('Enter the number of account you want to transfer to it :')
+                        amount=input('enter the amount of money you want to transfer :')
+                        if accounts[i].acc_num == target_acc_num:
+                          account1.transaction(target_acc_num,amount)
                   elif choice=='2':
                         print (accounts[i].closeAccount())
                   elif  (choice=='3'):  
